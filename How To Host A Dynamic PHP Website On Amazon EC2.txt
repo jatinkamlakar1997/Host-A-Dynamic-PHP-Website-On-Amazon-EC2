@@ -1,0 +1,28 @@
+How To Host A Dynamic PHP Website On Amazon EC2
+
+https://comtechies.com/how-to-host-a-dynamic-php-website-on-amazon-ec2-and-static-website-on-s3.html
+
+1. Launch an instance: Ubuntu
+
+2. Connect to your EC2 instance using putty:   
+
+Update the server using the following command
+
+ sudo apt-get update
+
+3. Install Lampserver : install web server using the following command
+
+sudo apt-get install lamp-server^
+
+The above command will install apache web server , php and Mysql. For a detailed tutorial for installing the lamp stack you can refer this tutorial How To Install Lamp Stack On Amazon EC2
+
+ 4. Now copy and paste the public DNS of your instance in the address bar of the browser and click enter. If it shows a page showing the message “It Works” , It means you have successfully installed the web server in your instance. 
+
+5. Uploading Web Pages to WWW Folder: After the web server has been installed you have to upload your web pages to the www folder of apache web server. You can locate the folder using the following command
+
+ cd /var/www 
+You can upload the files to your instance using filzilla client. If you never used filezilla client you can refer the following tutorial How To Upload Files To AWS Server Instance Using FileZilla 
+
+By default www folder contains index.html. Remove that default index.html and start uploading your HTML, CSS and PHP files to the server inside www folder.
+
+Index page of your website should have the name index.html. After uploading the files, if you go to your public DNS you can see the index page of your site. You can map your custom domain name to the EC2 instance using the elastic IP.
