@@ -26,3 +26,6 @@ You can upload the files to your instance using filzilla client. If you never us
 By default www folder contains index.html. Remove that default index.html and start uploading your HTML, CSS and PHP files to the server inside www folder.
 
 Index page of your website should have the name index.html. After uploading the files, if you go to your public DNS you can see the index page of your site. You can map your custom domain name to the EC2 instance using the elastic IP.
+Add php file from google and paste that in cd /var/www/html
+rename index.html as index.php
+sudo service apache2 restart
